@@ -1,0 +1,422 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww15760\viewh13000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b \cf0 Summary
+\b0 \
+\
+The purpose of vxTools is to help people complete large construction projects in Minecraft. It is intended to be client-side only so that users do not have to rely on server-side mods.\
+\
+Primary benefits of vxTools:\
+	- Faster construction: no time wasted repeating steps or placing blocks\
+	- Modular construction: common components can be reused\
+	- Structures can easily be migrated to other maps/locations/servers\
+	- Damaged structures can be easily restored\
+	- Simplified client commands: orient based on player\'92s point of view, rather than xyz axis\
+	- Models can be rotated (not possible in vanilla client)\
+\
+
+\b Roadmap
+\b0 \
+\
+The first iteration will only support Minecraft clients that are able to use commands (e.g.: fill, clone, summon, setblock, etc.). A future version may also support clients that are unable to use commands. Development will focus on immediate usability so that James can begin construction projects as soon as possible.\
+\
+
+\b Stakeholders
+\b0 \
+\
+James: primary developer, primary user\
+	- Will use the product to build things\
+	- Will use the project to exercise his dev skills and PM skills\
+\
+Family: secondary users\
+	- May use this to build things\
+\
+Other Players: clients for vxMod and vxStudio\
+	- May use this to build things\
+\
+Other Developers: open source community\
+	- May improve and expand upon vxTools\
+\
+
+\b Architecture
+\b0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul \ulc0 vxTools\ulnone \
+	- vxDev: development environment (documentation, specs, acceptance tests, unit tests, code, libraries, etc.)\
+	- vxLib: common code shared by all vx family products\
+	- vxMod: client-side minecraft Forge mod with built-in .vxm interpreter to perform construction tasks using commands\
+	- vxStudio: client-side executable to visualize and edit .vxm files\
+	- vxBot (future plans): client-side Minecraft Forge mod to play on worlds with restrictions (no commands, survival, mobs, etc.)\
+\
+\ul Components\ulnone \
+	- vxMod client-side command extensions\
+	- vxm file format: interpreted language that expands on the vxMod command extensions\
+	- vxm interpreter: Java module to parse and execute the vxm language\
+	- vxDoc: tool to generate vxTools documentation automatically from specs, tests, and source code\
+	- Spec files: feature descriptions and acceptance tests\
+	- Unit tests\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b \cf0 Dev Tools
+\b0 \
+1. Install GitKraken (https://www.gitkraken.com/download/mac)\
+2. Install Atom (https://atom.io/)\
+\
+\
+
+\b Steps
+\b0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Phase 1: Development Spike\ulnone \
+	- Goals:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 		[ ]
+\f0  Rapid-prototype a number of ideas and formats\
+
+\f1 		[ ]
+\f0  Learn the basics of Java programming\
+
+\f1 		[x]
+\f0  Learn the basics of Minecraft modding\
+
+\f1 		[ ]
+\f0  Learn the basics of OpenGL development\
+	- Deliverables:\
+
+\f1 		[x]
+\f0  Working mod spike (precursor to vxMod)\
+
+\f1 		[ ]
+\f0  Working visualization spike (precursor to vxStudio)\
+
+\f1 		[ ]
+\f0  Working dev environment (precursor to vxDev)\
+
+\f1 		[ ]
+\f0  Draft format for .vxm files\
+
+\f1 		[ ]
+\f0  Draft architecture for .vxm interpreter\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Phase 2: vxDev 1.0\ulnone \
+	- Goals:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 		[ ]
+\f0  Create a stable development environment for vxTools\
+
+\f1 		[ ]
+\f0  Enforce TDD (acceptance tests and unit tests)\
+
+\f1 		[ ]
+\f0  Auto-generated documentation\
+
+\f1 		[ ]
+\f0  One-step build utility\
+
+\f1 		[ ]
+\f0  Repository (GitHub)\
+
+\f1 		[ ]
+\f0  Continuous integration (desktop as server)\
+	- Deliverables:\
+
+\f1 		[x]
+\f0  vxTools repository on GitHub\
+
+\f1 		[ ]
+\f0  Stubs for each component:\
+
+\f1 			[ ]
+\f0  vxLib\
+	
+\f1 			[ ]
+\f0  Preliminary spec & acceptance tests\
+	
+\f1 			[ ]
+\f0  Preliminary unit tests\
+	
+\f1 			[ ]
+\f0  Basic code
+\f1 \
+			[ ]
+\f0  vxMod\
+	
+\f1 			[ ]
+\f0  Preliminary spec & acceptance tests\
+	
+\f1 			[ ]
+\f0  Preliminary unit tests\
+	
+\f1 			[ ]
+\f0  Basic code\
+
+\f1 			[ ]
+\f0  vxStudio\
+	
+\f1 			[ ]
+\f0  Preliminary spec & acceptance tests\
+	
+\f1 			[ ]
+\f0  Preliminary unit tests\
+	
+\f1 			[ ]
+\f0  Basic code
+\f1 \
+		[ ]
+\f0  vxDev 1.0 (tested: should be able to pull from repo, run installer, and build everything)\
+
+\f1 			[ ]
+\f0  Installer (download, configure & install)\
+
+\f1 			[ ]
+\f0  Build utility (create all from source)\
+
+\f1 			[ ]
+\f0  Test utility (run all unit & acceptance tests, export a report)\
+
+\f1 			[ ]
+\f0  Publish utility (generate documentation from repo)\
+
+\f1 		[ ]
+\f0  CI server (tested: must be able to pull the latest code, then build, test & publish)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Phase 3: vxMod 1.0\ulnone \
+	- Goals:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 		[ ]
+\f0  Create a mod that simplifies construction using client-side command extensions\
+
+\f1 		[ ]
+\f0  Use the mod to build something cool for a video\
+	- Deliverables:\
+
+\f1 		[ ]
+\f0  vxMod 1.0\
+
+\f1 			[ ]
+\f0  Updated spec & acceptance tests\
+
+\f1 			[ ]
+\f0  Updated docs\
+
+\f1 			[ ]
+\f0  Updated unit tests\
+
+\f1 			[ ]
+\f0  All tests passed\
+
+\f1 			[ ]
+\f0  Code tagged in repository\
+
+\f1 		[ ]
+\f0  Video of building something cool using vxMod 1.0\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Phase 4: vxInterpreter 1.0\ulnone \
+	- Goals:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 		[ ]
+\f0  Create the first iteration of the vxm interpretive language for build scripts\
+
+\f1 		[ ]
+\f0  Develop a Java module (in vxLib) to interpret and execute vxm\
+
+\f1 		[ ]
+\f0  Write a set of example vxm scripts to build something cool for a video\
+	- Deliverables:\
+
+\f1 		[ ]
+\f0  vxInterpreter 1.0\
+
+\f1 			[ ]
+\f0  Updated spec & acceptance tests\
+
+\f1 			[ ]
+\f0  Updated docs\
+
+\f1 			[ ]
+\f0  Updated unit tests\
+
+\f1 			[ ]
+\f0  All tests passed\
+
+\f1 			[ ]
+\f0  Code tagged in repository\
+
+\f1 		[ ]
+\f0  Video of building something cool using vxMod 1.0 & vxInterpreter 1.0\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Phase 5: vxStudio 1.0\ulnone \
+	- Goals:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 		[ ]
+\f0  Create a visualization tool for vxm files\
+
+\f1 		[ ]
+\f0  Generate plan views, cross-sections and ISO projections\
+
+\f1 		[ ]
+\f0  Adjustable camera angles\
+
+\f1 		[ ]
+\f0  Visualize a couple of cool vxm scripts and generate same in mc for a video\
+	- Deliverables:\
+
+\f1 		[ ]
+\f0  vxStudio 1.0\
+
+\f1 			[ ]
+\f0  Updated spec & acceptance tests\
+
+\f1 			[ ]
+\f0  Updated docs\
+
+\f1 			[ ]
+\f0  Updated unit tests\
+
+\f1 			[ ]
+\f0  All tests passed\
+
+\f1 			[ ]
+\f0  Code tagged in repository\
+
+\f1 		[ ]
+\f0  Video of building something cool using vxStudio 1.0, vxMod 1.0 & vxInterpreter 1.0\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b \cf0 Checklist
+\b0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 [x]
+\f0  Phase 1A: Development Spike (vxMod)\
+
+\f1 	[x]
+\f0  Research mod development
+\f1 \
+	[x]
+\f0  Install Forge\
+
+\f1 	[x]
+\f0  Develop a basic client-side Forge mod\
+
+\f1 		[x]
+\f0  Execute local commands\
+
+\f1 		[x]
+\f0  Open a file and execute the commands in that file\
+
+\f1 		[x]
+\f0  Identify player location and heading\
+
+\f1 		[x]
+\f0  Identify the \'93looked at\'94 block\
+\
+
+\f1 [ ]
+\f0  Phase 1B: Development Spike (vxInterpreter)\
+
+\f1 	[ ]
+\f0  Create a draft of the vxm language & file format
+\f1 \
+	[ ]
+\f0  Create preliminary vxInterpreter classes\
+\
+
+\f1 [ ]
+\f0  Phase 1C: Development Spike (vxDev)\
+
+\f1 	[ ]
+\f0  Research Java development\
+
+\f1 	[ ]
+\f0  Research GitHub\
+
+\f1 	[ ]
+\f0  Research CI
+\f1 \
+	[ ]
+\f0  Research Java unit testing\
+
+\f1 	[ ]
+\f0  Research Java spec & acceptance testing\
+
+\f1 	[ ]
+\f0  Research Javadoc\
+
+\f1 	[ ]
+\f0  Develop/install a basic testing framework
+\f1 \
+	[ ]
+\f0  Develop/install a basic documentation generator\
+
+\f1 	[ ]
+\f0  Develop/install a basic one-step build script\
+
+\f1 	[ ]
+\f0  Create a stub project to verify testing, docs, & build functionality\
+\
+
+\f1 	[ ]
+\f0  NetBeans\
+
+\f1 	[ ]
+\f0  GitHub\
+
+\f1 	[ ]
+\f0  Gradle\
+
+\f1 	[ ]
+\f0  JUnit
+\f1 \
+\
+[ ]
+\f0  Phase 1D: Development Spike (vxStudio)\
+
+\f1 	[ ]
+\f0  Research OpenGL Java development
+\f1 \
+	[ ]
+\f0  Install \'85?
+\f1 \
+	[ ]
+\f0  Develop a basic OpenGL rendering engine\
+
+\f1 		[ ]
+\f0  Axis rotation\
+
+\f1 		[ ]
+\f0  Wireframe cubes\
+
+\f1 		[ ]
+\f0  Depth fading\
+
+\f1 		[ ]
+\f0  Transparency\
+
+\f1 	[ ]
+\f0  Develop a basic (naive) block format
+\f1 \
+\
+\
+\'91umzar (greatest workshop)}
